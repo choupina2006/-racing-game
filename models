@@ -1,0 +1,8 @@
+const loader = new THREE.GLTFLoader();
+loader.load('models/car.glb', function(gltf) {
+  const car = gltf.scene;
+  car.scale.set(1, 1, 1); // تعديل الحجم إذا لزم الأمر
+  scene.add(car);
+}, undefined, function(error) {
+  console.error(error);
+});
